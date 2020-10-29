@@ -10,7 +10,6 @@ namespace DAL.Entities
         public University()
         {
             Users = new HashSet<User>();
-            UpcomingEvents = new HashSet<UpcomingEvent>();
             Auditoriums = new HashSet<Auditorium>();
             Disciplines = new HashSet<Discipline>();
         }

@@ -16,12 +16,12 @@ namespace DAL.Entities
         public DateTime DateOfBirth { get; set; }
 
         public long? UniversityId { get; set; }
-        public University School { get; set; }
+        public University University { get; set; }
 
         public long RoleId { get; set; }
         public Role Role { get; set; }
 
-        public Student Pupil { get; set; }
+        public Student Student { get; set; }
         public Teacher Teacher { get; set; }
     }
 }

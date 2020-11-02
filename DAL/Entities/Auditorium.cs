@@ -11,7 +11,7 @@ namespace DAL.Entities
         public string Name { get; set; }
 
         public long UniversityId { get; set; }
-        public University School { get; set; }
+        public University University { get; set; }
 
         public ICollection<Lesson> Lessons { get; set; }
     }

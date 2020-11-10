@@ -26,7 +26,7 @@ namespace DAL.Persistence.Configurations
                 new Role
                 {
                     Id = 1,
-                    Name = "pupil",
+                    Name = "student",
                     Description = "Simple pupil"
                 },
                 new Role
@@ -35,17 +35,12 @@ namespace DAL.Persistence.Configurations
                     Name = "teacher",
                     Description = "Simple teacher which lead the lessons"
                 },
-                new Role
-                {
-                    Id = 3,
-                    Name = "parent",
-                    Description = "Parent of the child pupil"
-                },
+                
                 new Role
                 {
                     Id = 4,
                     Name = "head-assistant",
-                    Description = "Head assistant of the school which create schedule"
+                    Description = "Head assistant of the university which create schedule"
                 },
                 new Role
                 {
@@ -63,7 +58,7 @@ namespace DAL.Persistence.Configurations
                 {
                     Id = 7,
                     Name = "admin",
-                    Description = "Main person of the system. Add new school"
+                    Description = "Main person of the system. Add new university"
                 }
             );
         }

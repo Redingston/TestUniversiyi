@@ -41,14 +41,14 @@ namespace DAL.Persistence.Configurations
                     Id = 2,
                     Number = 571,
                     Character = "CB",
-                    GroupeTeacherId = 1
+                    GroupeTeacherId = 2
                 },
                 new Groupe
                 {
                     Id = 3,
                     Number = 221,
                     Character = "AA",
-                    GroupeTeacherId = 2
+                    GroupeTeacherId = 3
                 }
             );
         }

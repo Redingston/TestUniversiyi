@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DAL.Persistence.Configurations
 {
-    class GroupeToStudentsConfiguration: IEntityTypeConfiguration<GroupeToStudent>
+    class GroupeToStudentsConfiguration : IEntityTypeConfiguration<GroupeToStudent>
     {
         public void Configure(EntityTypeBuilder<GroupeToStudent> builder)
         {
@@ -27,7 +27,46 @@ namespace DAL.Persistence.Configurations
                 new GroupeToStudent
                 {
                     GroupeId = 1,
-                    StudentId = 15
+                    StudentId = 4
+                },
+                new GroupeToStudent
+                {
+                    GroupeId = 1,
+                    StudentId = 5
+                },
+                new GroupeToStudent
+                {
+                    GroupeId = 1,
+                    StudentId = 6
+                }, new GroupeToStudent
+                {
+                    GroupeId = 1,
+                    StudentId = 7
+                }, new GroupeToStudent
+                {
+                    GroupeId = 1,
+                    StudentId = 8
+                }, new GroupeToStudent
+                {
+                    GroupeId = 1,
+                    StudentId = 9
+                }, new GroupeToStudent
+                {
+                    GroupeId = 2,
+                    StudentId = 10
+                }, new GroupeToStudent
+                {
+                    GroupeId = 2,
+                    StudentId = 11
+                },
+                new GroupeToStudent
+                {
+                    GroupeId = 2,
+                    StudentId = 12
+                }, new GroupeToStudent
+                {
+                    GroupeId = 2,
+                    StudentId = 13
                 }
             );
         }

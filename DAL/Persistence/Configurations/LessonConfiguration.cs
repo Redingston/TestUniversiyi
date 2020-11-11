@@ -45,67 +45,67 @@ namespace DAL.Persistence.Configurations
                 {
                     Id = 1,
                     LessonNumber = 1,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "8:00-9:20",
                     AuditoriumId = 1,
                     DisciplineId = 1,
-                    TeacherId = 45,
-                    GroupeId = 5
+                    TeacherId = 1,
+                    GroupeId = 1
                 },
                 new Lesson()
                 {
                     Id = 2,
                     LessonNumber = 2,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "9:35-10:55",
                     AuditoriumId = 2,
                     DisciplineId = 4,
-                    TeacherId = 4,
-                    GroupeId = 5
+                    TeacherId = 2,
+                    GroupeId = 1
                 },
                 new Lesson()
                 {
                     Id = 3,
                     LessonNumber = 3,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "11:10-12:30",
                     AuditoriumId = 3,
                     DisciplineId = 5,
-                    TeacherId = 42,
-                    GroupeId = 5
+                    TeacherId = 3,
+                    GroupeId = 1
                 },
                 new Lesson()
                 {
                     Id = 4,
                     LessonNumber = 4,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "13:30-14:50",
                     AuditoriumId = 4,
                     DisciplineId = 11,
-                    TeacherId = 45,
-                    GroupeId = 5
+                    TeacherId = 16,
+                    GroupeId = 1
                 },
                 new Lesson()
                 {
                     Id = 5,
                     LessonNumber = 5,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "15:05-16:25",
                     AuditoriumId = 5,
                     DisciplineId = 10,
-                    TeacherId = 42,
-                    GroupeId = 5
+                    TeacherId = 14,
+                    GroupeId = 1
                 },
                 new Lesson()
                 {
                     Id = 6,
                     LessonNumber = 1,
-                    LessonDate = new DateTime(2020, 3, 9),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "8:00-9:20",
-                    AuditoriumId = 6,
+                    AuditoriumId = 5,
                     DisciplineId = 10,
-                    TeacherId = 43,
-                    GroupeId = 5
+                    TeacherId = 14,
+                    GroupeId = 2
                 },
 
                 //Tuesday
@@ -113,45 +113,45 @@ namespace DAL.Persistence.Configurations
                 {
                     Id = 7,
                     LessonNumber = 2,
-                    LessonDate = new DateTime(2020, 3, 10),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "9:35-10:55",
                     AuditoriumId = 1,
                     DisciplineId = 11,
-                    TeacherId = 44,
-                    GroupeId = 5
+                    TeacherId = 16,
+                    GroupeId = 2
                 },
                 new Lesson()
                 {
                     Id = 8,
                     LessonNumber = 3,
-                    LessonDate = new DateTime(2020, 3, 10),
+                    LessonDate = new DateTime(2020,11, 23),
                     LessonTimeGap = "11:10-12:30",
                     AuditoriumId = 2,
                     DisciplineId = 1,
-                    TeacherId = 45,
-                    GroupeId = 5
+                    TeacherId = 1,
+                    GroupeId = 2
                 },
                 new Lesson()
                 {
                     Id = 9,
                     LessonNumber = 4,
-                    LessonDate = new DateTime(2020, 3, 10),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "13:30-14:50",
                     AuditoriumId = 3,
                     DisciplineId = 4,
-                    TeacherId = 42,
-                    GroupeId = 5
+                    TeacherId = 2,
+                    GroupeId = 2
                 },
                 new Lesson()
                 {
                     Id = 10,
                     LessonNumber = 5,
-                    LessonDate = new DateTime(2020, 3, 10),
+                    LessonDate = new DateTime(2020, 11, 23),
                     LessonTimeGap = "15:05-16:25",
                     AuditoriumId = 4,
                     DisciplineId = 5,
-                    TeacherId = 43,
-                    GroupeId = 5
+                    TeacherId = 3,
+                    GroupeId = 2
                 }
             );
         }

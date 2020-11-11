@@ -33,7 +33,6 @@ namespace DAL.Persistence.Configurations
                 new GroupeToDiscipline() { GroupeId = 2, DisciplineId = 11 },
                 new GroupeToDiscipline() { GroupeId = 3, DisciplineId = 1 },
                 new GroupeToDiscipline() { GroupeId = 3, DisciplineId = 5 },
-                new GroupeToDiscipline() { GroupeId = 1, DisciplineId = 11 },
                 new GroupeToDiscipline() { GroupeId = 3, DisciplineId = 6 },
                 new GroupeToDiscipline() { GroupeId = 3, DisciplineId = 7 }
             );

@@ -79,7 +79,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("teacher3").ToArray()),
                     DateOfBirth = new DateTime(1990, 11, 11),
                     RoleId = 2,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User
@@ -157,7 +157,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("student6").ToArray()),
                     DateOfBirth = new DateTime(2010, 9, 18),
                     RoleId = 1,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User
@@ -170,7 +170,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("student7").ToArray()),
                     DateOfBirth = new DateTime(2010, 9, 25),
                     RoleId = 1,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User
@@ -183,7 +183,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("student8").ToArray()),
                     DateOfBirth = new DateTime(2010, 7, 7),
                     RoleId = 1,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User
@@ -196,7 +196,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("student9").ToArray()),
                     DateOfBirth = new DateTime(2010, 8, 28),
                     RoleId = 1,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User
@@ -209,7 +209,7 @@ namespace DAL.Persistence.Configurations
                     Password = Convert.ToBase64String(new PasswordHash("student10").ToArray()),
                     DateOfBirth = new DateTime(2010, 1, 20),
                     RoleId = 1,
-                    UniversityId = 2,
+                    UniversityId = 1,
                     ImageUrl = "../../../assets/images/default-user-image.jpg"
                 },
                 new User

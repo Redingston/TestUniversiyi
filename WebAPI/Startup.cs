@@ -36,9 +36,10 @@ namespace WebAPI
             services.AddControllers();
 
             var connectionStringName = "TestDataBase";
-            services.AddDbContext<AppDbContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString(connectionStringName),
-                   x => x.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
+            services.AddDbContext<IAppDbContext, AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(connectionStringName),
+                    x => x.MigrationsAssembly("DAL")
+                ));
 
             services.AddSwaggerGen(c =>
             {

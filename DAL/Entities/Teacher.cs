@@ -10,7 +10,7 @@ namespace DAL.Entities
         public Teacher()
         {
             Lessons = new HashSet<Lesson>();
-            Classes = new HashSet<Class>();
+            Groupes = new HashSet<Groupe>();
             TeacherToDisciplines = new HashSet<TeacherToDiscipline>();
         }
         public long Id { get; set; }
@@ -19,7 +19,7 @@ namespace DAL.Entities
         public User User { get; set; }
 
         public ICollection<Lesson> Lessons { get; set; }
-        public ICollection<Class> Classes { get; set; }
+        public ICollection<Groupe> Groupes { get; set; }
         public ICollection<TeacherToDiscipline> TeacherToDisciplines { get; set; }
     }
 }

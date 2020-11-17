@@ -4,16 +4,16 @@ using System.Text;
 
 namespace DAL.Entities
 {
-    class Student
+    public class Student
     {
         public Student()
         {
-            ClassToPupils = new HashSet<ClassToPupil>();
+            GroupeToStudents = new HashSet<GroupeToStudent>();
         }
 
         public long Id { get; set; }
         public User User { get; set; }
 
-        public ICollection<ClassToPupil> ClassToPupils { get; set; }
+        public ICollection<GroupeToStudent> GroupeToStudents { get; set; }
     }
 }

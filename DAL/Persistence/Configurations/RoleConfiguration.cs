@@ -1,0 +1,66 @@
+﻿using DAL.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DAL.Persistence.Configurations
+{
+    class RoleConfiguration : IEntityTypeConfiguration<Role>
+    {
+        public void Configure(EntityTypeBuilder<Role> builder)
+        {
+            builder.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(64);
+
+            builder.Property(e => e.Description)
+                .IsRequired()
+                .HasMaxLength(256);
+
+            builder.HasMany(e => e.Users)
+                .WithOne(e => e.Role);
+
+            builder.HasData(
+                new Role
+                {
+                    Id = 1,
+                    Name = "student",
+                    Description = "Simple pupil"
+                },
+                new Role
+                {
+                    Id = 2,
+                    Name = "teacher",
+                    Description = "Simple teacher which lead the lessons"
+                },
+                
+                new Role
+                {
+                    Id = 4,
+                    Name = "head-assistant",
+                    Description = "Head assistant of the university which create schedule"
+                },
+                new Role
+                {
+                    Id = 5,
+                    Name = "master",
+                    Description = "Master of the system can create users"
+                },
+                new Role
+                {
+                    Id = 6,
+                    Name = "head-master",
+                    Description = "Simple master but can create other users and masters"
+                },
+                new Role
+                {
+                    Id = 7,
+                    Name = "admin",
+                    Description = "Main person of the system. Add new university"
+                }
+            );
+        }
+    }
+}

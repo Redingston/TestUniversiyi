@@ -8,16 +8,16 @@ namespace TestUniversityWPF.Models
 {
     public class UserInfoModel
     {
-        public long Id { get; set; }
-        public long UserId { get; set; }
-        public string FirstName { get; set; }
-        public string Surname { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public string Degree { get; set; }
-        public string ImageUrl { get; set; }
-        public string DateOfBirth { get; set; }
-        public string GroupName { get; set; }
-        public string UniversityName { get; set; }
+        public long id { get; set; }
+        public long userId { get; set; }
+        public string firstName { get; set; }
+        public string surname { get; set; }
+        public string phoneNumber { get; set; }
+        public string email { get; set; }
+        public string degree { get; set; }
+        public string imageUrl { get; set; }
+        public string dateOfBirth { get; set; }
+        public string groupName { get; set; }
+        public string universityName { get; set; }
     }
 }

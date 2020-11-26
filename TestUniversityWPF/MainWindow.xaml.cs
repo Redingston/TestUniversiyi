@@ -18,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestUniversityWPF.Models;
+using System.Threading;
 
 namespace TestUniversityWPF
 {
@@ -26,48 +27,44 @@ namespace TestUniversityWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string hostUrl = "https://localhost:5001/api/api/Teachers/GetTeacherById";
+        public string hostUrl = "https://localhost:5001/";
         TokenModel tokenModel;
-        UserInfoModel userInfo;
+        
         static HttpClient client = new HttpClient();
         public MainWindow(TokenModel token)
         {
             tokenModel = token;
             InitializeComponent();
-           
         }
 
-        private async Task GetUserInfo()
+        private async Task<UserInfoModel> GetUserInfo()
         {
-            client.BaseAddress = new Uri("http://localhost:64195/");
+            client.BaseAddress = new Uri(hostUrl);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.token);
+            //client.DefaultRequestHeaders.Add("Bearer", tokenModel.token);
 
-
-            
-
-            string jsonString;
-            jsonString = JsonSerializer.Serialize("Bearer " + tokenModel.token);
-
-            // write post data to request stream, and dispose streamwriter afterwards.
-          
-
-
-            string responseData = string.Empty;
-
-           
-
-            userInfo = new UserInfoModel();
-            userInfo = JsonSerializer.Deserialize<UserInfoModel>(responseData);
-            //errorEmail.Text = responseData;
-            userName.Text = userInfo.FirstName + " " + userInfo.Surname;
-           
+            UserInfoModel userInfo = new UserInfoModel();
+            var response = await client.GetAsync("api/Teachers/GetTeacherById").ConfigureAwait(false);
+            // Verification  
+            //if (response.IsSuccessStatusCode)
+            //{
+                var res = await response.Content.ReadAsStringAsync();
+            userInfo = JsonSerializer.Deserialize<UserInfoModel>(res);
+            return userInfo;
+            //}
+            //return userInfo;
         }
-       
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            GetUserInfo();
+            var user = await GetUserInfo();
+
+
+            userName.Text = user.firstName + " " + user.surname;
+
         }
     }
 }

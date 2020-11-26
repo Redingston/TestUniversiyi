@@ -15,7 +15,7 @@
             <ColumnDefinition Width="160"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="userName" Margin="3" FontSize="25" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Name="userName" Text="sdkfkl" Margin="3" FontSize="25" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></TextBlock>
         <Button Grid.Row="1" Click="Button_Click"> info</Button>
     </Grid>
 </Window>

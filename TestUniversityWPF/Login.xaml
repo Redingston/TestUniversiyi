@@ -1,0 +1,29 @@
+﻿<Window x:Class="TestUniversityWPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestUniversityWPF"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="380" Width="300" Background="Cyan">
+    
+    <Border Background="DimGray" CornerRadius="20" Margin="10">
+        <StackPanel Margin="20">
+            <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator/>
+            <Label Content="User email" Foreground="White"/>
+            <TextBox Name="email" TextChanged="TextBox_TextChanged" Background="Gray" Foreground="White" FontSize="18"/>
+            <TextBlock Name="errorEmail" Background="Gray" Foreground="Red" FontSize="18" Visibility="Hidden"/>
+            <Label Content="Password" Foreground="White"/>
+            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center"> 
+               <fa:ImageAwesome x:Name="spiner" Icon="Spinner" Spin="True" SpinDuration="10"  Width="150" HorizontalAlignment="Center" Foreground="Aqua"/>
+            </TextBlock>
+            <PasswordBox x:Name="password" PasswordChanged="PasswordBox_PasswordChanged" Background="Gray" Foreground="White" FontSize="18"/>
+            <TextBlock Name="errorPass"  Background="Gray" Foreground="Red" FontSize="18" Visibility="Hidden"/>
+            <Button Name="login" Click="login_Click" Content="Login" Height="25" Margin="60 10"/>
+            <Button Name="cancel" Click="cancel_Click" Content="Cancel" Background="Red" Height="25" Margin="60 0"/>
+        </StackPanel>
+    </Border>
+</Window>

@@ -44,24 +44,22 @@ namespace TestUniversityWPF
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenModel.token);
-            //client.DefaultRequestHeaders.Add("Bearer", tokenModel.token);
 
             UserInfoModel userInfo = new UserInfoModel();
             var response = await client.GetAsync("api/Teachers/GetTeacherById").ConfigureAwait(false);
             // Verification  
-            //if (response.IsSuccessStatusCode)
-            //{
+            if (response.IsSuccessStatusCode)
+            {
                 var res = await response.Content.ReadAsStringAsync();
-            userInfo = JsonSerializer.Deserialize<UserInfoModel>(res);
+                userInfo = JsonSerializer.Deserialize<UserInfoModel>(res);
+                return userInfo;
+            }
             return userInfo;
-            //}
-            //return userInfo;
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var user = await GetUserInfo();
-
 
             userName.Text = user.firstName + " " + user.surname;
 
